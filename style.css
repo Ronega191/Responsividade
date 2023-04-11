@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: rgb(0, 136, 136);
+}
+
+/*Cabeçalho*/
+.container_cabeçalho {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3rem;
+    animation: aparecer;
+    animation-duration: 2s;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+}
+
+.logo img {
+    width: 48px;
+    height: auto;
+}
+
+.logo h1 {
+    color: #ffff;
+    font-size: 1.55rem;
+    font-weight: 700;
+    margin-left: 0.8rem;
+}
+
+/*menubar*/
+ul {
+    display: flex;
+    list-style: none;
+    gap: 5rem;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+ul li a:hover {
+    color: #5bacdf;
+}
+
+.bnt {
+    background-color: #008db1;
+    padding: 0.9rem 1.3rem;
+    border-radius: 0.5rem;
+}
+
+.bnt:hover {
+    background-color: #011927;
+}
+
+/*homepage*/
+.meio {
+    display: flex;
+    max-width: 100%;
+    margin-top: 5rem;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    animation: aparecer;
+    animation-duration: 4s;
+}
+
+.Direita img {
+    max-width: 100%;
+    width: 700px;
+    height: auto;
+}
+
+.esquerda {
+    max-width: 100%;
+}
+
+.title h1 {
+    font-size: 50px;
+    color: #ccc;
+}
+
+.esquerda p {
+    color: #ccc;
+    line-height: 2.5rem;
+
+}
+
+button {
+    color: #ffffff;
+    background-color: #5bacdf;
+    padding: 0.9rem 1.3rem;
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #5bacdf;
+    background-color: #011927;
+}
+
+/*Responsividade*/
+aside {
+    display: none;
+}
+
+@media screen and (max-width:740px) {
+    ul {
+        display: none;
+    }
+
+    .links {
+        display: block;
+    }
+
+    .logo {
+        margin-right: 15rem;
+    }
+
+    aside {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        overflow: hidden;
+    }
+
+    #Barra_menu {
+        background-color: #2889c2;
+        width: 0px;
+        height: 1200px;
+        transition: 0.3s all;
+    }
+
+    .icon_menu ion-icon {
+        width: 45px;
+        height: 45px;
+        margin-right: 1.5rem;
+        margin-top: 2rem;
+        color: #fff;
+    }
+
+    #Barra_menu ul {
+        align-items: center;
+        text-align: center;
+        padding: 5rem;
+        line-height: 5rem;
+    }
+
+    #Barra_menu ul li a {
+        color: #011927;
+        text-decoration: none;
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    #Barra_menu ul li a:hover {
+        border-radius: 15px;
+        background-color: #fff;
+        padding: 8px
+    }
+
+    .c_icon {
+        margin-top: 10%;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        overflow: hidden;
+    }
+
+    .c_icon span {
+        color: #ffff;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:580px) {
+    .title h1 {
+        font-size: 2.2rem;
+        margin-left: 1.5rem;
+    }
+
+    .esquerda p {
+        font-size: 1rem;
+        margin-left: 1.5rem;
+        width: 450px;
+    }
+
+    button {
+        margin-left: 1.5rem;
+    }
+
+    .Direita img {
+        max-width: 100%;
+        width: 440px;
+        margin-top: 4.5rem;
+        height: auto;
+    }
+
+
+}
+
+@media screen and (max-width:474px) {
+    .Direita img {
+        margin-left: 1.2rem;
+        width: 300px;
+        height: 250px;
+
+
+    }
+
+    .esquerda p{
+        width: 250px;
+        
+    }
+
+    .title h1{
+        font-size: 25px;
+    }
+
+    .logo img{
+        margin-left: 70px;
+    }
+}
+
+
+/*aboutpage*/
+.sobre {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(2, 56, 56);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.im-sobre img {
+    margin: 70px;
+    width: 550px;
+    height: 550px;
+    flex-wrap: wrap;
+    border-radius: 50px;
+    animation: aparecer;
+    animation-duration: 2s;
+
+}
+
+
+.tx-sobre {
+    color: #fff;
+    margin: 70px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.tx-sobre {
+    width: 600px;
+    overflow-wrap: break-word;
+    font-size: 25px;
+    animation: aparecer;
+    animation-duration: 5s;
+}
+
+
+@media screen and (max-width:689px) {
+    .container_cabeçalho{
+        margin-top: 35px;
+    }
+    .sobre {
+        width: 100%;
+        height: 100%;
+    }
+    .im-sobre img {
+        margin: 20px;
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width:473px) {
+    .sobre {
+        width: 100%;
+        height: 100%;
+    }
+    .im-sobre img {
+        margin: 20px;
+        width: 250px;
+        height: 250px;
+        padding: 0px;
+    }
+}
+
+/*animation*/
+@keyframes aparecer {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
